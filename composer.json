@@ -1,0 +1,21 @@
+{
+    "name": "giddyeffects/yii2-yiipixu",
+    "description": "Access weather and geo data via the JSON/XML RESTful Apixu API directly in your Yii2 project",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","api","apixu","weather"," weather forecast","current weather"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Gideon Nyaga",
+            "email": "giddyeffects@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "giddyeffects\\yiipixu\\": ""
+        }
+    }
+}
