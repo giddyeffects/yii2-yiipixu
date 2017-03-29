@@ -1,51 +1,12 @@
-Yii2 Extension for the Apixu Weather API
-========================================
-Access weather and geo data via the JSON/XML RESTful Apixu API directly in your Yii2 project
+<?php
 
-Installation
-------------
-
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
-
-Either run
-
-```
-php composer.phar require --prefer-dist giddyeffects/yii2-yiipixu "*"
-```
-
-or add
-
-```
-"giddyeffects/yii2-yiipixu": "*"
-```
-
-to the require section of your `composer.json` file.
+/* 
+ * Example code on how to use the yii2-yiipixu extension
+ * 
+ * @author Gideon Nyaga
+ */
 
 
-Usage
------
-First get an Apixu API key [here](https://www.apixu.com/signup.aspx).
-
-Once the extension is installed, simply add the following code in your application configuration:
-
-```php
-return [
-    //....
-    'components' => [
-        //...
-        'apixu' => [
-            'class' => 'giddyeffects\yiipixu\Apixu',
-            'api_key' => 'YOUR_APIXU_API_KEY',
-        ],
-    ],
-];
-```
-You can now access the extension via \Yii::$app->apixu;
-
-For more details refer to the [Apixu Documentation](https://www.apixu.com/doc/).
-Example
--------
-```
     $weather = \Yii::$app->apixu;
     $weather->query = 'Nairobi';
     $weather->request();
@@ -107,8 +68,3 @@ Example
     else {
         echo $weather->response->error->message;
     }
-```
-
-Live Demo
----------
-Go to the [Interactive API Explorer](https://www.apixu.com/api-explorer.aspx) to test the API. 
